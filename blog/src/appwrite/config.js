@@ -6,10 +6,13 @@ export class Service{
     databases;
     bucket;
     
-    constructor(){
+  
+        
+    constructor() {
         this.client
-        .setEndpoint(conf.appwriteUrl)
-        .setProject(conf.appwriteProjectId);
+            .setEndpoint('https://cloud.appwrite.io/v1')
+            .setProject('66dd562b0006b24a9b00');
+    
         this.databases = new Databases(this.client);
         this.bucket = new Storage(this.client);
     }
